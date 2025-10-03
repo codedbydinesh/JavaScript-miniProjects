@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  color: white;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Container */
+.container {
+  width: 90%;            /* ✅ percentage */
+  max-width: 100rem;     /* ✅ upper limit */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading */
+h1 {
+  color: rgb(226, 226, 226);
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+  margin-top: 5rem;
+}
+
+/* Choices */
+.choices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 3rem 0;
+  flex-wrap: wrap; /* ✅ small screen wrap */
+}
+
+.choices .choice {
+  width: 15rem;
+  height: 15rem;
+  cursor: pointer;
+  border: 0.2rem solid rgba(6, 6, 130, 0.687);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.728);
+}
+
+.choices .choice:hover {
+  opacity: 0.9;
+  border: .3rem solid rgba(6, 6, 130, 0.687);
+}
+
+.choices .choice img {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Scoreboard */
+.score-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 5rem 0;
+}
+.score {
+  text-align: center;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+.score #user-score, #computer-score {
+  font-size: 3rem;
+}
+
+.msg-container #message {
+  background-color: rgb(240, 252, 240);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3px rgb(205, 204, 204);
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212121;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  html { font-size: 56%; }
+  .choices { gap: 2rem; }
+  .choices .choice {
+    width: 12rem;
+    height: 12rem;
+  }
+  .choices .choice img {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html { font-size: 50%; }
+  .choices {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .choices .choice {
+    width: 10rem;
+    height: 10rem;
+  }
+  .choices .choice img {
+    width: 9rem;
+    height: 9rem;
+  }
+}
