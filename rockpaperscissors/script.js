@@ -20,17 +20,17 @@ const drawGame = () => {
     msg.style.color = '#212121'
 
 }
-const showWinner = (userWin) => {
+const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
         console.log('You win!');
-        msg.innerText = 'You win!'
+        msg.innerText = `You win! "${userChoice}" beats "${compChoice}"`
         msg.style.color = 'green'
         userS++;
         userScore.innerText = userS;
     }
     else{
         console.log('You Lose!');
-        msg.innerText = 'You Lose!'
+        msg.innerText = `You Lost. "${compChoice}" beats "${userChoice}"`
         msg.style.color = 'red'
         computerS++;
         computerScore.innerText = computerS;
@@ -59,7 +59,7 @@ const playGame = (userChoice) => {
             // rock, paper
             userWin = compChoice === 'paper' ? true : false; // (user)scissors === paper(comp)
         }
-        showWinner(userWin);
+        showWinner(userWin, userChoice, compChoice);
 
     }
     
