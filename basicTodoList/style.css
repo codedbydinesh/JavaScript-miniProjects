@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.todo-container{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+.todo-container .todo{
+    width: 90%;
+    max-width: 600px;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(141, 199, 250);
+    
+}
+.todo .todo-content input{
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(195, 255, 208);
+}
+.todo .todo-content button{
+    color: rgb(35, 35, 35);
+    background-color: #cbfcc0;
+    border: 1px solid rgb(0, 255, 115);
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+.todo-list .list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 0;
+    background-color: rgb(219, 255, 217);
+    padding: 5px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.todo-list .list li button{
+    color: rgb(35, 35, 35);
+    background-color: #f5b0b0;
+    border: 1px solid red;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
